@@ -7,10 +7,10 @@ import { Balance } from "./Balance";
 import AddTransaction from "./AddTransaction";
 
 export const MainContainer = () => {
-  const [expenses, setExpenses] = useState([]);
+  const [expenses, getExpenses] = useState([]);
 
   useEffect(() => {
-    axios.get("api/expense").then((response) => setExpenses(response.data));
+    axios.get("api/expense").then((response) => getExpenses(response.data));
   }, []);
   return (
     <Fragment>
