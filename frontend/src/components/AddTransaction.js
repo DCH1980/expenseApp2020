@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Actions from "../axios/Actions";
+import Actions from "../axios/actions";
 
-const AddTransaction = () => {
+export const AddTransaction = () => {
   const initialTransactionState = {
     name: "",
     label: "",
@@ -136,4 +136,3 @@ const AddTransaction = () => {
   );
 };
 
-export default AddTransaction;

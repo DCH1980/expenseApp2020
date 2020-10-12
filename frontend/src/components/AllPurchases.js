@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState, useEffect, Fragment } from "react";
+import axios from "axios";
 
-export const AllPurchases = ({ expenses }) => {
+export const AllPurchases = () => {
+  const [expenses, getExpenses] = useState([]);
+
+  useEffect(() => {
+    axios.get("api/expense").then((response) => getExpenses(response.data));
+  }, []);
+
+
   const myItems = expenses.map((item) => (
     <tr key={item.id}>
       <td>{item.name}</td>

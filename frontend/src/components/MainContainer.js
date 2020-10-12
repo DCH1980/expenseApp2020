@@ -1,26 +1,19 @@
 import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
-import { Header } from "./Header";
+import { TableHead } from "./TableHead";
 import { AllPurchases } from "./AllPurchases";
 import { Total } from "./Total";
+import {Table} from './Table'
+import {AddTransaction} from "./AddTransaction";
 import { Balance } from "./Balance";
-import AddTransaction from "./AddTransaction";
+import { TableTwo } from './TableTwo';
 
 export const MainContainer = () => {
-  const [expenses, getExpenses] = useState([]);
-
-  useEffect(() => {
-    axios.get("api/expense").then((response) => getExpenses(response.data));
-  }, []);
-  return (
+    return (
     <Fragment>
-      <Balance balance={expenses} />
-      <table className="table table-striped">
-        <Header />
-        <AllPurchases expenses={expenses} />
-      </table>
-      <Total amount={expenses} />
-      <AddTransaction />
-    </Fragment>
+      <Table />
+        <AddTransaction />
+        <TableTwo />
+        </Fragment>
   );
 };
