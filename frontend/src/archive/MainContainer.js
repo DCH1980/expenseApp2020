@@ -7,12 +7,14 @@ import {Table} from './Table'
 import {AddTransaction} from "./AddTransaction";
 import { Balance } from "./Balance";
 import { TableTwo } from './TableTwo';
+import { Transactions } from '../components/transactions/Transactions'
 
 export const MainContainer = () => {
     return (
     <Fragment>
       <Table />
         <AddTransaction />
+        <Transactions />
         <TableTwo />
         </Fragment>
   );

@@ -1,16 +1,15 @@
 import React from "react";
-import { Balance } from "./components/Balance";
-import { MainContainer } from "./components/MainContainer";
-import { GlobalProvider } from "./context/GlobalState";
-// import { Transaction } from "./components/Transaction";
+import TransactionState from './context/transactions/TransactionState'
+import { Transactions } from './components/transactions/Transactions'
+import { Balance } from './components/Balance'
+
 
 const App = () => {
   return (
-    <GlobalProvider>
-      <div className="container"></div>
-
-      <MainContainer />
-    </GlobalProvider>
+    <TransactionState>
+      <Transactions />
+    </TransactionState>
+    
   );
 };
 

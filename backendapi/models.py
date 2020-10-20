@@ -11,3 +11,7 @@ class Expense(models.Model):
     auto_pay = models.BooleanField()
     amount_due = models.IntegerField()
     due_date = models.DateField()
+
+
+class Item(models.Model):
+    name = models.CharField(max_length=20)
