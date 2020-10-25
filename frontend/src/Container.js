@@ -1,10 +1,10 @@
 import React from "react";
 import TransactionState from './context/transactions/TransactionState'
 import { Transactions } from './components/transactions/Transactions'
-import { Balance } from './components/Balance'
+import { Balance } from './archive/Balance'
 import AddTransaction from "./components/transactions/AddTransaction";
 
-import Table from "./components/complexTable/Table";
+import Table from "./archive/complexTable/Table";
 
 
 const Container = () => {

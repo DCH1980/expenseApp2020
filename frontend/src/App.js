@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { useQuery, useMutation, useQueryCache, QueryCache, ReactQueryCacheProvider } from 'react-query'
-import Container from "./Container";
 import { ReactQueryDevtools } from "react-query-devtools";
 import axios from 'axios';
 
@@ -12,7 +11,7 @@ const App = () =>{
   return (
     
     <ReactQueryCacheProvider queryCache={queryCache}>
-      <Container />,
+    
       <p>some test here</p>
       {transactionId > -1 ? (
         <Transaction transactionId={transactionId} setTransactionId={setTransactionId} />
