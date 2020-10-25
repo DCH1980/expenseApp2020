@@ -3,6 +3,7 @@ import { GET_ALL, ADD_TRANSACTION, DELETE_TRANSACTION, TRANSACTION_ERROR, SET_CU
 export default (state, action) => {
   switch (action.type) {
     case GET_ALL:
+      const { id, ...rest} = action.payload
       return {
         ...state,
         transactions: action.payload,

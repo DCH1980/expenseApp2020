@@ -1,6 +1,6 @@
 import React, { Fragment, useContext, useEffect } from 'react';
 import Balance from '../Balance'
-
+import TableHead from './TableHead'
 import TransactionContext from '../../context/transactions/transactionContext'
 
 export const Transactions = () => {
@@ -29,7 +29,7 @@ export const Transactions = () => {
     <Balance amount={transactions} />
     
     <table className="table table-striped">
-  
+    <TableHead />
     <tbody>{myItems}</tbody>
     </table>
   </Fragment>;

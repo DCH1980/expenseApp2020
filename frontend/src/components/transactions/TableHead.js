@@ -1,11 +1,17 @@
 import React from "react";
 
-
-const TableHead = ({ transactions }) => {
-  const dues = transactions.amount_due.map((amount) =>
-    <div>{amount.amount_due}</div>)
-  
-  return <div>{amounts}</div>;
+const TableHead = () => {
+  return (
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>label</th>
+        <th>AutoPay</th>
+        <th>Amount Due</th>
+        <th>Date Due</th>
+      </tr>
+    </thead>
+  );
 };
 
 export default TableHead
